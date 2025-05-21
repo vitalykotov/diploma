@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>search</title>
+  <link rel="stylesheet" href="search-page-styles.css" />
+</head>
+<body>
+  <div class="page-content">
+    <header class="header">
+      <div class="header-bar">
+        <div class="logo">last.fm</div>
+        <form class="search-form" action="/search" role="search" aria-label="Форма поиска">
+        <input
+            type="search"
+            name="q"
+            class="search-input"
+            placeholder="Искать..."
+            required
+            aria-label="Поле поиска"
+        />
+        <button type="submit" class="search-button" aria-label="Кнопка поиска">Поиск</button>
+        </form>
+
+        <nav class="nav">
+          <a href="/mainPage" class="nav-link">Главная</a>
+          <a href="/artists" class="nav-link">Артисты</a>
+          <a href="/tracks" class="nav-link">Треки</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="main-title">Результаты поиска</h1>
+      <section class="search-results" aria-live="polite" aria-label="Результаты поиска">
+      
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">About Last.fm</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Jobs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>HELP</h4>
+        <ul>
+          <li><a href="#">Track My Music</a></li>
+          <li><a href="#">Community Support</a></li>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>GOODIES</h4>
+        <ul>
+          <li><a href="#">Download Scrobbler</a></li>
+          <li><a href="#">Developer API</a></li>
+          <li><a href="#">Free Music Downloads</a></li>
+          <li><a href="#">Merchandise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ACCOUNT</h4>
+        <ul>
+          <li><a href="#">Inbox</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Last.fm Pro</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>FOLLOW US</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-langs">
+        English Deutsch Español Français Italiano Polski Português Русский ...
+      </div>
+      <div class="footer-time">
+        Time zone: Europe/Moscow
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 Last.fm
+    </div>
+  </div>
+</footer>
+</body>
+</html>
