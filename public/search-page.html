@@ -1,45 +1,65 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>search</title>
+  <title>Search results</title>
   <link rel="stylesheet" href="search-page-styles.css" />
 </head>
 <body>
-  <div class="page-content">
-    <header class="header">
-      <div class="header-bar">
-        <div class="logo">last.fm</div>
-        <form class="search-form" action="/search" role="search" aria-label="Форма поиска">
+  <header class="header">
+  <div class="header-bar">
+    <div class="logo">last.fm</div>
+    <nav class="nav">
+      <form class="search-form" id="searchForm" action="search.html" method="get" autocomplete="off">
         <input
-            type="search"
-            name="q"
-            class="search-input"
-            placeholder="Искать..."
-            required
-            aria-label="Поле поиска"
+          type="search"
+          name="q"
+          class="search-input"
+          placeholder="Search for music, artists, albums..."
+          required
         />
-        <button type="submit" class="search-button" aria-label="Кнопка поиска">Поиск</button>
-        </form>
-
-        <nav class="nav">
-          <a href="/mainPage" class="nav-link">Главная</a>
-          <a href="/artists" class="nav-link">Артисты</a>
-          <a href="/tracks" class="nav-link">Треки</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <h1 class="main-title">Результаты поиска</h1>
-      <section class="search-results" aria-live="polite" aria-label="Результаты поиска">
-      
-      </section>
-    </main>
+        <button type="submit" class="search-button" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="9" cy="9" r="7" stroke="#e3000f" stroke-width="2"/>
+            <line x1="14.5" y1="14.5" x2="19" y2="19" stroke="#e3000f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+      <a href="main_page.html" class="nav-link">Home</a>
+      <a class="nav-link">Live</a>
+      <a class="nav-link">Music</a>
+      <a class="nav-link">Charts</a>
+      <a class="nav-link">Events</a>
+      <a class="nav-link">Features</a>
+    </nav>
   </div>
+</header>
 
-  <footer class="footer">
+  <main class="main-content">
+    <h1 class="main-title">Search results for “<span id="search-query"></span>”</h1>
+    <div class="search-tabs">
+      <div class="search-tabs">
+        <span class="tab active" data-tab="top">Top Results</span>
+        <span class="tab" data-tab="artists">Artists</span>
+        <span class="tab" data-tab="albums">Albums</span>
+        <span class="tab" data-tab="tracks">Tracks</span>
+      </div>
+    </div>
+    <section id="artists-section" class="search-section">
+      <h2>Artists</h2>
+      <div id="artists-list" class="card-grid"></div>
+    </section>
+    <section id="albums-section" class="search-section">
+      <h2>Albums</h2>
+      <div id="albums-list" class="card-grid"></div>
+    </section>
+    <section id="tracks-section" class="search-section">
+      <h2>Tracks</h2>
+      <div id="tracks-list" class="track-list"></div>
+    </section>
+  </main>
+
+   <footer class="footer">
   <div class="footer-content">
     <div class="footer-cols">
       <div class="footer-col">
@@ -100,5 +120,11 @@
     </div>
   </div>
 </footer>
+
+
+  <script src="api-search.js"></script>
+  <script src="search.js"></script>
 </body>
 </html>
+
+
