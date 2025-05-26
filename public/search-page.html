@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Search results</title>
+  <link rel="stylesheet" href="search-page-styles.css" />
+</head>
+<body>
+  <header class="header">
+  <div class="header-bar">
+    <div class="logo">last.fm</div>
+    <nav class="nav">
+      <form class="search-form" id="searchForm" action="search.html" method="get" autocomplete="off">
+        <input
+          type="search"
+          name="q"
+          class="search-input"
+          placeholder="Search for music, artists, albums..."
+          required
+        />
+        <button type="submit" class="search-button" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="9" cy="9" r="7" stroke="#e3000f" stroke-width="2"/>
+            <line x1="14.5" y1="14.5" x2="19" y2="19" stroke="#e3000f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+      <a href="main_page.html" class="nav-link">Home</a>
+      <a class="nav-link">Live</a>
+      <a class="nav-link">Music</a>
+      <a class="nav-link">Charts</a>
+      <a class="nav-link">Events</a>
+      <a class="nav-link">Features</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="main-content">
+    <h1 class="main-title">Search results for “<span id="search-query"></span>”</h1>
+    <div class="search-tabs">
+      <div class="search-tabs">
+        <span class="tab active" data-tab="top">Top Results</span>
+        <span class="tab" data-tab="artists">Artists</span>
+        <span class="tab" data-tab="albums">Albums</span>
+        <span class="tab" data-tab="tracks">Tracks</span>
+      </div>
+    </div>
+    <section id="artists-section" class="search-section">
+      <h2>Artists</h2>
+      <div id="artists-list" class="card-grid"></div>
+    </section>
+    <section id="albums-section" class="search-section">
+      <h2>Albums</h2>
+      <div id="albums-list" class="card-grid"></div>
+    </section>
+    <section id="tracks-section" class="search-section">
+      <h2>Tracks</h2>
+      <div id="tracks-list" class="track-list"></div>
+    </section>
+  </main>
+
+   <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">About Last.fm</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Jobs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>HELP</h4>
+        <ul>
+          <li><a href="#">Track My Music</a></li>
+          <li><a href="#">Community Support</a></li>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>GOODIES</h4>
+        <ul>
+          <li><a href="#">Download Scrobbler</a></li>
+          <li><a href="#">Developer API</a></li>
+          <li><a href="#">Free Music Downloads</a></li>
+          <li><a href="#">Merchandise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ACCOUNT</h4>
+        <ul>
+          <li><a href="#">Inbox</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Last.fm Pro</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>FOLLOW US</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-langs">
+        English Deutsch Español Français Italiano Polski Português Русский ...
+      </div>
+      <div class="footer-time">
+        Time zone: Europe/Moscow
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 Last.fm
+    </div>
+  </div>
+</footer>
+
+
+  <script src="api-search.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>
+
+

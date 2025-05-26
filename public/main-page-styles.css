@@ -1,0 +1,248 @@
+body {
+  background: #fff;
+  color: #111;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.header {
+  background: #111;
+  color: #fff;
+  padding: 0;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px 12px 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #e3000f;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: #e3000f;
+}
+
+.main-title {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 32px 0 24px 0;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-title::after {
+  content: '';
+  display: block;
+  margin: 8px auto 0 auto;
+  width: 40px;
+  height: 2px;
+  background: #e3000f;
+}
+
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 40px;
+  margin: 0 auto 38px auto;
+  max-width: 1100px;
+}
+.artist {
+  width: 120px;
+  text-align: center;
+}
+.artist img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #eee;
+  background: #fafafa;
+}
+.artist-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.artist-tags {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.tracks {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+}
+.track-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 240px;
+}
+.track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.track img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #eee;
+}
+.track-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.track-artist {
+  font-size: 0.95rem;
+  color: #444;
+}
+.track-tags {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 36px 0 0 0;
+  font-size: 0.97rem;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.footer-cols > div {
+  min-width: 140px;
+}
+.footer-cols h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer-cols ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-cols ul li {
+  margin-bottom: 7px;
+}
+.footer-cols ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-cols ul li a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  border-top: 1px solid #222;
+  padding: 12px 0;
+  margin-bottom: 8px;
+}
+.footer-langs {
+  color: #aaa;
+}
+.footer-time {
+  color: #aaa;
+}
+.footer-copy {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  padding-bottom: 16px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-toggle {
+  background: none;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.search-form {
+  background: #222;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0.3s cubic-bezier(.4,2,.6,1), opacity 0.2s;
+  margin-right: 18px;
+}
+
+.search-form.active {
+  width: 200px;
+  opacity: 1;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  padding: 6px 12px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+
